@@ -4,6 +4,6 @@ WORKDIR /action
 
 ENV ACTION_WORKSPACE=/action
 
-COPY scripts/* scripts/*
+COPY scripts/ scripts/
 
 CMD [ "/bin/bash", "/action/scripts/run.sh" ]

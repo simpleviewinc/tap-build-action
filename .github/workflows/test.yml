@@ -15,3 +15,5 @@ jobs:
       with:
         repository: simpleviewinc/tap-events-force
         cli_branch: ZEN-543-tap-workflow
+    # - id: forever
+    #   run: tail -f /dev/null

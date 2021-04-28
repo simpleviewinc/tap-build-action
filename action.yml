@@ -1,9 +1,10 @@
 name: tap-build-action
 description: 'Builds a keg tap package and pushes it to the registry'
+
 inputs:
   user:
     description: 'The username for docker login',
-    default: keg-admin
+    default: 'keg-admin'
   ref:
     description: >
       The branch, tag or SHA to checkout. When checking out the repository that
@@ -20,11 +21,11 @@ inputs:
       Also when generating a new PAT, select the least scopes necessary.
     default: ${{ github.token }}
   cli_branch:
-    description: keg-cli branch to use during execution
-    default: develop
+    description: 'keg-cli branch to use during execution'
+    default: 'develop'
   tag:
-    description: the tag of the built tap image
-    default: develop
+    description: 'the tag of the built tap image'
+    default: 'develop'
 
 runs:
   using: 'docker'

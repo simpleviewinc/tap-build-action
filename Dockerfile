@@ -8,4 +8,4 @@ COPY scripts/ scripts/
 
 RUN apk add --no-cache git bash docker-cli
 
-CMD [ "/bin/bash", "/action/scripts/run.sh" ]
+ENTRYPOINT [ "/action/scripts/run.sh" ] 

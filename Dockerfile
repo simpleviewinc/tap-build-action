@@ -8,7 +8,6 @@ COPY scripts/ scripts/
 
 # RUN apt-get update -y
 RUN apk add --no-cache git bash docker-cli
-# RUN apt-get install docker-cli  -y
-# ARG Foo
 
-CMD [ "/bin/bash", "/action/scripts/run.sh" ]
+# CMD [ "/bin/bash", "/action/scripts/run.sh" ]
+CMD [ "echo", "Docker file cmd!" ]

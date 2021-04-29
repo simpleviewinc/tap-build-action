@@ -16,4 +16,3 @@ jobs:
         repository: simpleviewinc/tap-events-force
         cli_branch: ZEN-543-tap-workflow
         tap_ref: /ref/heads/tap-alias
-l

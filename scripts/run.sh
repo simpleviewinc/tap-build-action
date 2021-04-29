@@ -1,10 +1,12 @@
 #!/bin/bash
 set -e
 
+# logs a missing env error
 missing_env () {
-  echo "\$$1 ENV is required, but was undefined."
+  echo "Error: \$$1 ENV is required, but was undefined."
 }
 
+# verifies all the required environment variables are set
 check_envs() {
   if [[ -z $ACTION_WORKSPACE ]]; then
     missing_env "ACTION_WORKSPACE"

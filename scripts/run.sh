@@ -44,6 +44,8 @@ check_envs() {
 
 check_envs
 
+echo "==== Starting Tap Build Action"
+
 $ACTION_WORKSPACE/scripts/cli.sh
 $ACTION_WORKSPACE/scripts/auth.sh
 $ACTION_WORKSPACE/scripts/tap.sh

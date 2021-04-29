@@ -5,11 +5,11 @@ inputs:
   cli_branch:
     description: 'keg-cli branch to use during execution'
     default: 'develop'
-  ref:
+  tap_ref:
     description: >
-      The branch, tag or SHA to checkout. When checking out the repository that
+      The tap branch to checkout (example: /ref/heads/my-feature-branch). When checking out the repository that
       triggered a workflow, this defaults to the reference or SHA for that
-      event.  Otherwise, uses the default branch.
+      event. 
     default: ${{ github.ref }}
   repository:
     description: 'Repository name with owner. For example, actions/checkout'

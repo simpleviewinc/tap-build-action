@@ -1,12 +1,12 @@
 FROM node:14.16-alpine
 
-# WORKDIR /action
+WORKDIR /action
 
-# ENV ACTION_WORKSPACE=/action
+ENV ACTION_WORKSPACE=/action
 
-# COPY scripts/ scripts/
+COPY scripts/ scripts/
 
-# RUN apk add --no-cache git bash docker-cli
+RUN apk add --no-cache git bash docker-cli
 
-# CMD [ "/bin/bash", "/action/scripts/run.sh" ]
-CMD [ "echo", "Docker file cmd!" ]
+CMD [ "/bin/bash", "/action/scripts/run.sh" ]
+# CMD [ "echo", "Docker file cmd!" ]

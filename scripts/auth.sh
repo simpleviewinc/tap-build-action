@@ -1,3 +1,4 @@
+set -e
 source $ACTION_WORKSPACE/keg-cli/keg
 
 set_docker_user () {

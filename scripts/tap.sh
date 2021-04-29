@@ -1,3 +1,4 @@
+set -e
 source $ACTION_WORKSPACE/keg-cli/keg
 
 export TAPS_DIR=$ACTION_WORKSPACE/keg-hub/taps

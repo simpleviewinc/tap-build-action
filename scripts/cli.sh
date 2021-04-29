@@ -1,3 +1,4 @@
+set -e
 
 clone_cli () {
   echo "==== Cloning Keg-CLI branch $INPUT_CLI_BRANCH"
@@ -23,6 +24,6 @@ setup_cli () {
   return $?
 }
 
-clone_cli || { echo 'Clone failed' ; exit 1; }
-install_cli || { echo 'Install failed' ; exit 1; }
-setup_cli || { echo 'Install failed' ; exit 1; }
+clone_cli
+install_cli
+setup_cli

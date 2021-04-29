@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 missing_env () {
   echo "\$$1 ENV is required, but was undefined."

@@ -11,8 +11,8 @@ check_envs() {
     exit 1
   fi
 
-  if [[ -z $INPUT_CLI_BRANCH ]]; then
-    missing_env "INPUT_CLI_BRANCH"
+  if [[ -z $INPUT_CLI_GIT_BRANCH ]]; then
+    missing_env "INPUT_CLI_GIT_BRANCH"
     exit 1
   fi
 

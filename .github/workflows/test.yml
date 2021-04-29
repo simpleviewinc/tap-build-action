@@ -9,12 +9,10 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-      with:
-        path: "/action"
     - name: Tap Build and Push
       id: tap-build-push
       uses: ./
       with:
         repository: simpleviewinc/tap-events-force
-        cli_branch: ZEN-543-tap-workflow
+        cli_git_branch: ZEN-543-tap-workflow
         tap_ref: /ref/heads/tap-alias

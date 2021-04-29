@@ -2,7 +2,7 @@ name: tap-build-action
 description: 'Builds a keg tap package and pushes it to the registry'
 
 inputs:
-  cli_branch:
+  cli_git_branch:
     description: 'keg-cli branch to use during execution'
     default: 'develop'
   tap_ref:
@@ -31,7 +31,7 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.cli_branch }}
+    - ${{ inputs.cli_git_branch }}
     - ${{ inputs.ref }}
     - ${{ inputs.repository }}
     - ${{ inputs.tag }}

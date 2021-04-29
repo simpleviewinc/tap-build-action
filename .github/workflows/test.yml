@@ -16,3 +16,4 @@ jobs:
         repository: simpleviewinc/tap-events-force
         cli_git_branch: ZEN-543-tap-workflow
         tap_ref: /ref/heads/tap-alias
+        token: ${{ secrets.KEG_ADMIN_TOKEN }}

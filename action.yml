@@ -1,7 +1,9 @@
 name: tap-build-action
 description: 'Builds a keg tap package and pushes it to the registry'
-icon: 'upload-cloud'
-color: blue
+
+branding:
+  icon: 'upload-cloud'
+  color: 'blue'
 
 inputs:
   cli_git_branch:

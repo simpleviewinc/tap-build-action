@@ -3,7 +3,7 @@ source $ACTION_WORKSPACE/keg-cli/keg
 
 set_docker_user () {
   keg config set key=docker.user value=$INPUT_USER --confirm false
-  keg config set key=cli.git.key value=$INPUT_TOKEN --confirm false
+  keg git key add value=$INPUT_TOKEN
 }
 
 set_git_user () {

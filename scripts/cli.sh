@@ -8,7 +8,6 @@ clone_cli () {
 install_cli () {
   echo "==== Installing Keg-CLI dependencies..." 
   cd $ACTION_WORKSPACE/keg-cli
-  echo "====>>>> CLI BRANCH: $(git branch); PWD: $(pwd)"
   yarn install
 }
 

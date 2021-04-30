@@ -1,12 +1,12 @@
-# Overview
-`tap-build-action` is a reusable github action that uses the [keg-cli](https://github.com/simpleviewinc/keg-cli) to build any tap's docker package and submit it to github registry. 
+# Overview: 
+`tap-build-action` is a github action that uses the [keg-cli](https://github.com/simpleviewinc/keg-cli) to build any tap's docker image and submit it to the github docker registry. 
 
 For more information on taps and the keg, see [keg-hub](https://github.com/simpleviewinc/keg-hub)
 
 # Usage
 
 ```yml
-- uses: simpleviewinc/tap-build-action@0.0.2
+- uses: simpleviewinc/tap-build-action@0.0.3
   with:
     # The keg-cli git branch to use for building and pushing the image.
     #

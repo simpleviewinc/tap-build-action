@@ -2,8 +2,8 @@ set -e
 source $ACTION_WORKSPACE/keg-cli/keg
 
 set_creds () {
-  keg config set key=docker.user value=$INPUT_USER --confirm false
-  keg git key add value=$INPUT_TOKEN
+  keg config set key=docker.user --value $INPUT_USER --confirm false
+  keg git key add --value $INPUT_TOKEN --confirm false
 }
 
 set_git_user () {

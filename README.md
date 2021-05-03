@@ -32,7 +32,7 @@ For more information on taps and the keg, see [keg-hub](https://github.com/simpl
 
     # This action will tag your tap's built image with this tag name.
     # 
-    # Default: 'develop'
+    # Default: tap_ref input value ( current branch name || develop )
     tag: ''
 
     # Personal access token (PAT) used to fetch the repository and push its image. 

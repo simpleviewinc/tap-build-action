@@ -7,6 +7,9 @@ export TAP_NAME=$(basename $INPUT_REPOSITORY)
 export TAP_PATH=$TAPS_DIR/$TAP_NAME
 export TAP_ALIAS="client_tap"
 
+# Check if INPUT_TAG exists, if not, use INPUT_TAP_REF env or develop
+[[ "$INPUT_TAG" ]] || export INPUT_TAG=${INPUT_TAP_REF:-develop};
+
 clone_tap () {
   echo "==== Cloning Tap with branch $TAP_BRANCH"
   git -C $TAPS_DIR clone --single-branch --branch $TAP_BRANCH https://github.com/$INPUT_REPOSITORY

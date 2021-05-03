@@ -29,8 +29,7 @@ check_envs() {
   fi
 
   if [[ -z $INPUT_TAG ]]; then
-    missing_env "INPUT_TAG"
-    exit 1
+    export INPUT_TAG=$INPUT_TAP_REF
   fi
 
   if [[ -z $INPUT_TOKEN ]]; then

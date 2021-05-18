@@ -16,7 +16,7 @@ setup_cli () {
   cd $ACTION_WORKSPACE/keg-cli
 
   KEG_ROOT_DIR=$ACTION_WORKSPACE/keg-hub \
-    source scripts/ci/setupCLIConfig.sh
+    bash scripts/ci/setupCLIConfig.sh
 }
 
 # Set the path ENV for the global config
@@ -25,7 +25,7 @@ setup_cli () {
 # Even though line 44 of `setupCLIConfig.sh` exports the `KEG_GLOBAL_CONFIG`, we can't access it
 # Instead of setting this ENV here, we could update line 18 of this file
 # to use `source` instead of `bash`
-# export KEG_GLOBAL_CONFIG=$ACTION_WORKSPACE/keg-cli/.kegConfig/cli.config.json
+export KEG_GLOBAL_CONFIG=$ACTION_WORKSPACE/keg-cli/.kegConfig/cli.config.json
 
 clone_cli
 install_cli

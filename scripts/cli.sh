@@ -15,7 +15,7 @@ setup_cli () {
   echo "==== Configuring CLI..." 
   cd $ACTION_WORKSPACE/keg-cli
 
-  KEG_ROOT_DIR=$ACTION_WORKSPACE/keg-cli \
+  KEG_ROOT_DIR=$ACTION_WORKSPACE/keg-hub \
     source scripts/ci/setupCLIConfig.sh
 }
 

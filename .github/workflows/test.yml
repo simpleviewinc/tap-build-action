@@ -17,6 +17,6 @@ jobs:
       uses: ./
       with:
         repository: simpleviewinc/tap-events-force
-        cli_git_branch: ZEN-543-updates-for-workflow
+        cli_git_branch: master
         tap_ref: /ref/heads/tap-alias
         token: ${{ secrets.GIT_TOKEN }}

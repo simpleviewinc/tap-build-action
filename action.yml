@@ -10,7 +10,7 @@ inputs:
     description: 'keg-cli branch to use during execution'
     default: 'develop'
   keg_hub_git_branch:
-    description: 'keg-cli branch to use during execution'
+    description: 'keg-hub branch to use during execution'
     default: 'develop'
   tap_ref:
     description: >
@@ -39,6 +39,7 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.cli_git_branch }}
+    - ${{ inputs.keg_hub_git_branch }}
     - ${{ inputs.ref }}
     - ${{ inputs.repository }}
     - ${{ inputs.tag }}

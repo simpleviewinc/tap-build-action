@@ -1,5 +1,7 @@
 set -e
 
+CLI_PATH=$ACTION_WORKSPACE/keg-cli
+
 clone_cli () {
   echo "==== Cloning Keg-CLI branch $INPUT_CLI_GIT_BRANCH"
   git -C $ACTION_WORKSPACE clone --single-branch --branch $INPUT_CLI_GIT_BRANCH https://github.com/simpleviewinc/keg-cli.git
@@ -7,25 +9,21 @@ clone_cli () {
 
 install_cli () {
   echo "==== Installing Keg-CLI dependencies..." 
-  cd $ACTION_WORKSPACE/keg-cli
+  cd $CLI_PATH
   yarn install
 }
 
 setup_cli () {
   echo "==== Configuring CLI..." 
-  cd $ACTION_WORKSPACE/keg-cli
+  cd $CLI_PATH
 
-  KEG_ROOT_DIR=$ACTION_WORKSPACE/keg-hub \
-    bash scripts/ci/setupCLIConfig.sh
+  KEG_CLI_BRANCH=$INPUT_CLI_GIT_BRANCH \
+    KEG_CLI_PATH=$CLI_PATH \
+    KEG_HUB_BRANCH=$INPUT_KEG_HUB_GIT_BRANCH \
+    KEG_ROOT_DIR=$ACTION_WORKSPACE/keg-hub \
+    GIT_TOKEN=$INPUT_TOKEN \
+    bash scripts/ci/setupKegEnvironment.sh
 }
-
-# Set the path ENV for the global config
-# Because `scripts/ci/setupCLIConfig.sh` gets called with `bash` and not `source` || `.`
-# Any envs exported from the script are not loaded in this session
-# Even though line 44 of `setupCLIConfig.sh` exports the `KEG_GLOBAL_CONFIG`, we can't access it
-# Instead of setting this ENV here, we could update line 18 of this file
-# to use `source` instead of `bash`
-export KEG_GLOBAL_CONFIG=$ACTION_WORKSPACE/keg-cli/.kegConfig/cli.config.json
 
 clone_cli
 install_cli

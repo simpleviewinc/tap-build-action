@@ -45,8 +45,11 @@ check_envs() {
 
 check_envs
 
+export CLI_PATH=$ACTION_WORKSPACE/keg-cli
+export KEG_GLOBAL_CONFIG=$CLI_PATH/.kegConfig/cli.config.json
+export KEG_CLI_USER=keg-admin
+
 echo "==== Starting Tap Build Action"
 
 $ACTION_WORKSPACE/scripts/cli.sh
-$ACTION_WORKSPACE/scripts/auth.sh
 $ACTION_WORKSPACE/scripts/tap.sh

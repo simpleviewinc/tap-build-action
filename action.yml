@@ -9,6 +9,9 @@ inputs:
   cli_git_branch:
     description: 'keg-cli branch to use during execution'
     default: 'develop'
+  keg_hub_git_branch:
+    description: 'keg-cli branch to use during execution'
+    default: 'develop'
   tap_ref:
     description: >
       The tap branch to checkout (example: /ref/heads/my-feature-branch). When checking out the repository that

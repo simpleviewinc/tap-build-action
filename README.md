@@ -13,6 +13,12 @@ For more information on taps and the keg, see [keg-hub](https://github.com/simpl
     # Default: 'develop'
     cli_git_branch: ''
 
+    # The keg-hub git branch to use, for setting up the keg
+    #
+    # Default: 'develop'
+    keg_hub_git_branch: ''
+
+
     # The git ref of the tap to checkout.
     # When checking out the repository that triggered a workflow, this 
     # defaults to the reference or SHA for that event. 

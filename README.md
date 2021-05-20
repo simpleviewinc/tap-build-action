@@ -6,7 +6,7 @@ For more information on taps and the keg, see [keg-hub](https://github.com/simpl
 # Usage
 
 ```yml
-- uses: simpleviewinc/tap-build-action@0.0.3
+- uses: simpleviewinc/tap-build-action@0.0.4
   with:
     # The keg-cli git branch to use for building and pushing the image.
     #

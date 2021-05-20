@@ -49,6 +49,8 @@ export CLI_PATH=$ACTION_WORKSPACE/keg-cli
 export KEG_GLOBAL_CONFIG=$CLI_PATH/.kegConfig/cli.config.json
 export KEG_CLI_USER=keg-admin
 
+echo "==== Using config at $KEG_GLOBAL_CONFIG"
+
 echo "==== Starting Tap Build Action"
 
 $ACTION_WORKSPACE/scripts/cli.sh
